@@ -5,22 +5,22 @@
 class TimeboundIam < Formula
   desc "Temporary AWS credential broker that runs as an MCP server"
   homepage "https://github.com/builder-magic/timebound-iam"
-  version "0.4.0"
+  version "0.6.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/builder-magic/timebound-iam/releases/download/v0.4.0/timebound-iam_0.4.0_darwin_amd64.tar.gz"
-      sha256 "d883775b05980bce212f268a54c39370a43314f1b94a65384d3860eb32a0f799"
+      url "https://github.com/builder-magic/timebound-iam/releases/download/v0.6.0/timebound-iam_0.6.0_darwin_amd64.tar.gz"
+      sha256 "95cf43a61a9bee43ba08561494b040285730f75f4e1c9577c6e50643d8c4fe13"
 
-      def install
+      define_method(:install) do
         bin.install "timebound-iam"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/builder-magic/timebound-iam/releases/download/v0.4.0/timebound-iam_0.4.0_darwin_arm64.tar.gz"
-      sha256 "5390ac81e7693891ab01ffafef927b89be6013cc1d6187ab3d659ca73fe31d36"
+      url "https://github.com/builder-magic/timebound-iam/releases/download/v0.6.0/timebound-iam_0.6.0_darwin_arm64.tar.gz"
+      sha256 "8e29a13a4a23dcf75fb413bc51e1f49b9e30c7afcba08dcece7c922182dc8377"
 
-      def install
+      define_method(:install) do
         bin.install "timebound-iam"
       end
     end
@@ -28,16 +28,16 @@ class TimeboundIam < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/builder-magic/timebound-iam/releases/download/v0.4.0/timebound-iam_0.4.0_linux_amd64.tar.gz"
-      sha256 "6e0cf4136751923ce98ad8d628df1acf8ac61b59d0a9730706cf9547b0e801d7"
-      def install
+      url "https://github.com/builder-magic/timebound-iam/releases/download/v0.6.0/timebound-iam_0.6.0_linux_amd64.tar.gz"
+      sha256 "fc7e487fc7d60780f8df7d82873a09923eb424cef76b933e4b43ac4931ca3e88"
+      define_method(:install) do
         bin.install "timebound-iam"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/builder-magic/timebound-iam/releases/download/v0.4.0/timebound-iam_0.4.0_linux_arm64.tar.gz"
-      sha256 "fc665da49d6a183ca14cf4465ca405337dc71022fd299f9b403cb14dcd9ba91f"
-      def install
+      url "https://github.com/builder-magic/timebound-iam/releases/download/v0.6.0/timebound-iam_0.6.0_linux_arm64.tar.gz"
+      sha256 "cee72519a544cf51efbf83bbda386d8d3579187dfd79f02ca15a7d0ed6940e83"
+      define_method(:install) do
         bin.install "timebound-iam"
       end
     end
